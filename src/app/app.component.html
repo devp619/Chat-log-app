@@ -1,0 +1,14 @@
+<h3 class="header">{{title}}</h3>
+<div class="container">
+  <div class="message-row" *ngFor="let message of chatLogMessages">
+    <div class="avatar-wrapper">
+      <img [src]="message.avatar || 'assets/user.svg'" class="avatar" />
+    </div>
+    <div class="message-wrapper">
+      <h5 class="full-name">{{message.fullName}}</h5>
+      <p class="email">{{message.email}}</p>
+      <p class="message">{{message.message}}</p>
+    </div>
+    <span class="timestamp">{{message.timestamp | date:'medium'}}</span>
+  </div>
+</div>

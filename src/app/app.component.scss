@@ -1,0 +1,81 @@
+.header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  position: sticky;
+  top: 0;
+  margin-top: 0;
+  background: lightslategray;
+  padding: 0.5rem 0;
+  color: white;
+  box-shadow: -2px 2px 7px 0px #ababab;
+  z-index: 1;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .message-row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 7.5px;
+    border-bottom: 1px solid lightgray;
+    align-items: flex-start;
+    position: relative;
+
+    .message-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+
+      .email {
+        line-height: 0;
+        transform: scaleY(0);
+        transition: all 0.3s;
+      }
+    }
+
+    .avatar-wrapper,
+    .message-wrapper {
+      padding: 0.5rem;
+    }
+
+    .full-name,
+    .message,
+    .email {
+      margin: 0;
+    }
+
+    .message {
+      margin-bottom: 0.5rem;
+    }
+
+    .avatar-wrapper:hover + .message-wrapper {
+      .email {
+        line-height: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .timestamp {
+      align-self: flex-end;
+      font-weight: 600;
+      font-style: italic;
+      color: gray;
+      font-size: 0.8rem;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .avatar {
+      width: 3rem;
+      height: auto;
+      border-radius: 3rem;
+    }
+  }
+}
